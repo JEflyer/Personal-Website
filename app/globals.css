@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global.css */
+:root {
+  --metallic-silver: #C0C0C0;
+  --dark-charcoal: #303030;
+  --gunmetal-gray: #524B4B;
+  --antique-bronze: #665D1E;
+  --soft-black: #1a1a1a;
+  --pearl-white: #F0EAD6;
+  --rich-black-fogra: #010101;
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('/Cinzel.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--pearl-white);
+  color: var(--soft-black);
+  font-family: 'Cinzel', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark-charcoal);
+  font-family: 'Cinzel', serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.main {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--gunmetal-gray);
+}
+
+@media (max-width: 768px) {
+  .title{
+    font-size: 2rem;
+  }
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Tokenomics Section */
+.tokenomics {
+  background-color: var(--rich-black-fogra);
+  color: var(--metallic-silver);
+  padding: 1rem; /* Reduced padding */
+  border-radius: 10px;
+  margin: 2rem auto; /* Centered margin */
+  max-width: 100%; /* Ensure max width is not exceeded */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.tokenomicsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center grid items */
+  text-align: center; /* Center-align the text */
+}
+
+.tokenomics h2 {
+  color: var(--antique-bronze);
+  font-size: x-large;
+  text-align: center; /* Centered heading */
+}
+
+.tokenomicsContent div {
+  margin-bottom: 1rem;
+  width: 100%; /* Ensure divs take up full width */
+}
+
+.tokenomicsContent h3 {
+  color: var(--pearl-white);
+  text-align: center; /* Center-align the text */
+}
+
+.tokenomicsContent p {
+  text-align: center; /* Center-align the text */
+}
+
+.about-us {
+  font-size: x-large;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .tokenomics {
+    padding: 1rem; /* Adjust padding for small screens */
+  }
+
+  .tokenomics h2 {
+    font-size: large; /* Adjust heading size for smaller screens */
+  }
+}
+
+
+
+/* Footer Section */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: var(--dark-charcoal);
+  color: var(--pearl-white);
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  color: var(--pearl-white);
+}
+
+.footer p {
+  margin-top: 1rem;
+}
+
+/* Coin Image Styling */
+.coin-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin: 2rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Social Buttons Styling */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.twitter-button, .telegram-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--pearl-white);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-family: 'Cinzel', serif;
+}
+
+.twitter-button {
+  background-color: #1DA1F2;
+}
+
+.twitter-button:hover {
+  background-color: #0d8cd9;
+}
+
+.telegram-button {
+  background-color: #0088cc;
+}
+
+.telegram-button:hover {
+  background-color: #0077b5;
+}
+
+/* Buy Now Button Styling */
+.buy-now-button-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.buy-now-button {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 5px;
+  background-color: var(--antique-bronze);
+  color: var(--pearl-white);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-family: 'Cinzel', serif;
+}
+
+.buy-now-button:hover {
+  background-color: #5a5022;
+}
+
+/* Roadmap Section Styling */
+.roadmap {
+  background-color: var(--dark-charcoal);
+  color: var(--pearl-white);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+
+.roadmap h2 {
+  color: var(--antique-bronze);
+  margin-bottom: 1rem;
+  font-size: x-large;
+}
+
+.roadmap-phase h3 {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: var(--pearl-white);
+  margin-top: 1.5rem;
+}
+
+.roadmap-phase h3:hover {
+  color: var(--antique-bronze);
+}
+
+.roadmap-phase ul {
+  list-style: inside square;
+  padding-left: 0;
+}
+
+.roadmap-phase li {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design for Roadmap Section */
+@media (max-width: 768px) {
+  .roadmap-phase h3 {
+    font-size: 24px;
+  }
+}
+
+.triangle {
+  display: inline-block;
+  margin-left: 8px; /* Adjust spacing based on your design */
+  transition: transform 0.3s ease;
+}
+
+/* Rotate the triangle when a phase is open */
+.roadmap-phase h3 .triangle {
+  transform: rotate(0deg); /* Triangle pointing down */
+}
+
+/* Rotate back for closed state */
+.roadmap-phase h3 .triangle {
+  transform: rotate(180deg); /* Triangle pointing up */
+}
